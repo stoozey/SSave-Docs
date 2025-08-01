@@ -2,28 +2,23 @@
 
 ## Functions
 
-<!-- ssave_get -->
 ### **`ssave_get(ssaveConstructor, [filePrefix])`**
-
----
 
 Wrapper of [SSaveManager.get](ssave-manager.md#ssavemanagergetssaveconstructor-fileprefix).
 
 This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `true`
 
-<!-- ssave_remove -->
-### **`ssave_remove(ssaveConstructor, [filePrefix])`**
-
 ---
 
-Wrapper of [SSaveManager.get](ssave-manager.md#ssavemanagerremovessaveconstructor-fileprefix).
+### **`ssave_remove(ssaveConstructor, [filePrefix])`**
+
+Wrapper of [SSaveManager.remove](ssave-manager.md#ssavemanagerremovessaveconstructor-fileprefix).
 
 This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `true`
 
-<!-- ssave_get_all -->
-### **`ssave_get_all([ssaveConstructor])`**
-
 ---
+
+### **`ssave_get_all([ssaveConstructor])`**
 
 *Returns* `Array<`[`SSave`](ssave.md)`>` – an array of matching saves
 
@@ -37,12 +32,11 @@ If no constructor is supplied, ALL saves (regardless of their constructor), are 
 
 This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `true`
 
+---
+
 ## SSaveManager
 
-<!-- SSaveManager.get -->
 ### **`SSaveManager.get(ssaveConstructor, [filePrefix])`**
-
----
 
 *Returns* [`SSave`](ssave.md) – the requested save instance
 
@@ -54,10 +48,9 @@ This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `
 Looks for a cached save matching the constructor and prefix then returns it.
 If it hasn't yet been cached, first, it will attempt to load it.
 
-<!-- SSaveManager.remove -->
-### **`SSaveManager.remove(ssaveConstructor, [filePrefix])`**
-
 ---
+
+### **`SSaveManager.remove(ssaveConstructor, [filePrefix])`**
 
 *Returns* `Undefined`
 
@@ -68,3 +61,5 @@ If it hasn't yet been cached, first, it will attempt to load it.
 
 Looks for a cached save matching the constructor and prefix.
 If it exists, it will be destroyed and removed from the cache.
+
+---
