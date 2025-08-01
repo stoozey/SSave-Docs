@@ -1,11 +1,13 @@
 # SSave
 
-## **`SSave([name, protection]) constructor`**
+## Constructor
+
+### **`SSave([name, protection]) constructor`**
 
 | Name     | Type                                              | Required? | Default                                 | Description                              |
 | -------- | ----------                                        | :-------: | ---------                               | ---------------------------------------- |
 | `name`   | `String`                                           |  No      | `"data"`                                | The name of the file that gets written to disk.    |
-| `protection`| [`SSAVE_PROTECTION`](enums.md#ssave_protection) |  No      | [`SSAVE_PROTECTION_DEFAULT`](config.md) | The new protection level to set.    |
+| `protection`| [`SSAVE_PROTECTION`](enums.md#ssave_protection) |  No      | [`SSAVE_PROTECTION_DEFAULT`](config.md#ssave_protection_default) | The new protection level to set.    |
 
 The constructor for the base SSave class. It is not intended to be used directly, but rather extended by other classes.
 
@@ -17,7 +19,7 @@ function SaveFile() : SSave("save", SSAVE_PROTECTION.ENCODE) constructor {
 
 ---
 
-## **`SSave.add_value(name, type, default)`**
+### **`SSave.add_value(name, type, default)`**
 
 *Returns* `Undefined`
 
@@ -37,7 +39,9 @@ function SaveFile() : SSave("save", SSAVE_PROTECTION.ENCODE) constructor {
 
 ---
 
-## **`SSave.load([filePrefix])`**
+## Class Functions
+
+### **`SSave.load([filePrefix])`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
@@ -49,7 +53,7 @@ Loads a save from disk.
 
 ---
 
-## **`SSave.save()`**
+### **`SSave.save()`**
 
 *Returns* `Boolean` – returns success
 
@@ -57,7 +61,7 @@ Saves the current state of the save to disk.
 
 ---
 
-## **`SSave.get(name)`**
+### **`SSave.get(name)`**
 
 *Returns* `Any` – the current value
 
@@ -70,7 +74,7 @@ Retrieves the current value of the specified name. If the value does not exist, 
 
 ---
 
-## **`SSave.get_default(name)`**
+### **`SSave.get_default(name)`**
 
 *Returns* `Any` – the default value defined in [`add_value()`](ssave.md#ssaveadd_valuename-type-default).
 
@@ -80,7 +84,7 @@ Retrieves the current value of the specified name. If the value does not exist, 
 
 ---
 
-## **`SSave.set(name, value)`**
+### **`SSave.set(name, value)`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
@@ -91,7 +95,7 @@ Retrieves the current value of the specified name. If the value does not exist, 
 
 ---
 
-## **`SSave.reset(name)`**
+### **`SSave.reset(name)`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
@@ -103,7 +107,7 @@ Resets the value to its default as defined in [`add_value()`](ssave.md#ssaveadd_
 
 ---
 
-## **`SSave.reset_all()`**
+### **`SSave.reset_all()`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
@@ -111,7 +115,7 @@ Resets all values to their defaults as defined in [`add_value()`](ssave.md#ssave
 
 ---
 
-## **`SSave.set_protection(protection)`**
+### **`SSave.set_protection(protection)`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
@@ -125,7 +129,7 @@ Don't worry about keeping track of/updating protection levels when loading files
 
 ---
 
-## **`SSave.get_protection()`**
+### **`SSave.get_protection()`**
 
 *Returns* [`SSAVE_PROTECTION`](enums.md#ssave_protection) – the current protection level
 
@@ -133,7 +137,7 @@ Returns the current protection level of the save.
 
 ---
 
-## **`SSave.set_file_prefix(filePrefix)`**
+### **`SSave.set_file_prefix(filePrefix)`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
@@ -145,7 +149,7 @@ Updates the file prefix of the save. This is useful for things like save slots, 
 
 ---
 
-## **`SSave.get_file_prefix()`**
+### **`SSave.get_file_prefix()`**
 
 *Returns* `String`
 
@@ -153,7 +157,7 @@ Returns the current file prefix of the save.
 
 ---
 
-## **`SSave.get_full_name()`**
+### **`SSave.get_full_name()`**
 
 *Returns* `String`
 

@@ -6,7 +6,7 @@
 
 Wrapper of [SSaveManager.get](ssave-manager.md#ssavemanagergetssaveconstructor-fileprefix).
 
-This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `true`
+This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`
 
 ---
 
@@ -14,7 +14,7 @@ This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `
 
 Wrapper of [SSaveManager.remove](ssave-manager.md#ssavemanagerremovessaveconstructor-fileprefix).
 
-This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `true`
+This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`
 
 ---
 
@@ -30,7 +30,7 @@ Iterates on all cached saves matching the constructor and returns an array of th
 
 If no constructor is supplied, ALL saves (regardless of their constructor), are returned.
 
-This can only be used if the [`SSAVE_USE_MANAGER`](config.md) configuration is `true`
+This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`
 
 ---
 
