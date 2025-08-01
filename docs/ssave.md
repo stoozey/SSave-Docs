@@ -37,6 +37,26 @@ function SaveFile() : SSave("save", SSAVE_PROTECTION.ENCODE) constructor {
 
 ---
 
+## **`SSave.load([filePrefix])`**
+
+*Returns* [`SSave`](ssave.md) – returns itself for chaining
+
+| Name        | Type               | Required?  | Default  | Description                                                                                                              |
+| --------    | -------------      | :-------:  | -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `filePrefix`| `String` OR `Real` |  No        | `""`     | The prefix of the filename. Usually, you can leave this empty--but it can be useful for things like multiple save slots. |
+
+Loads a save from disk.
+
+---
+
+## **`SSave.save()`**
+
+*Returns* `Boolean` – returns success
+
+Saves the current state of the save to disk.
+
+---
+
 ## **`SSave.get(name)`**
 
 *Returns* `Any` – the current value
@@ -71,15 +91,23 @@ Retrieves the current value of the specified name. If the value does not exist, 
 
 ---
 
-## **`SSave.load([filePrefix])`**
+## **`SSave.reset(name)`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining
 
-| Name        | Type               | Required?  | Default  | Description                                                                                                              |
-| --------    | -------------      | :-------:  | -------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `filePrefix`| `String` OR `Real` |  No        | `""`     | The prefix of the filename. Usually, you can leave this empty--but it can be useful for things like multiple save slots. |
+| Name      | Type       | Required? | Default   | Description                 |
+| --------  | ---------- | :-------: | --------- | --------------------------- |
+| `name`    | `String`   |  Yes      | -         | The name of the value.      |
 
-Loads a save from disk.
+Resets the value to its default as defined in [`add_value()`](ssave.md#ssaveadd_valuename-type-default).
+
+---
+
+## **`SSave.reset_all()`**
+
+*Returns* [`SSave`](ssave.md) – returns itself for chaining
+
+Resets all values to their defaults as defined in [`add_value()`](ssave.md#ssaveadd_valuename-type-default).
 
 ---
 
@@ -91,8 +119,44 @@ Loads a save from disk.
 | --------    | ----------                                      | :-------: | ---------| ---------------------------------------- |
 | `protection`| [`SSAVE_PROTECTION`](enums.md#ssave_protection) |  Yes      | —        | The new protection level to set.    |
 
-Updates the protection level of the file. This value gets cached, so you only need to call it once per change.
+Updates the protection level of the save. This value gets cached, so you only need to call it once per change.
 
 Don't worry about keeping track of/updating protection levels when loading files, this is handled automatically by SSave when [`load()`](ssave.md#ssaveloadfileprefix) is called.
+
+---
+
+## **`SSave.get_protection()`**
+
+*Returns* [`SSAVE_PROTECTION`](enums.md#ssave_protection) – the current protection level
+
+Returns the current protection level of the save.
+
+---
+
+## **`SSave.set_file_prefix(filePrefix)`**
+
+*Returns* [`SSave`](ssave.md) – returns itself for chaining
+
+| Name        | Type     | Required? | Default  | Description                    |
+| --------    | -------- | :-------: | ---------| ------------------------------ |
+| `filePrefix`| `String` |  Yes      | —        | The new file prefix to set.    |
+
+Updates the file prefix of the save. This is useful for things like save slots, where you want to have multiple saves of the same ssave class.
+
+---
+
+## **`SSave.get_file_prefix()`**
+
+*Returns* `String`
+
+Returns the current file prefix of the save.
+
+---
+
+## **`SSave.get_full_name()`**
+
+*Returns* `String`
+
+Returns the file prefix and name of the save, which is the full filename that will be written to disk.
 
 ---
