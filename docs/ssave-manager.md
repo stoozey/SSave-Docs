@@ -46,7 +46,7 @@ This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) 
 | `filePrefix`      | `String`   |   No      | `SSAVE_FILE_PREFIX_DEFAULT`    | Optional file prefix to use when loading. Useful for things like save slots |
 
 Looks for a cached save matching the constructor and prefix then returns it.
-If it hasn't yet been cached, first, it will attempt to load it.
+If it hasn't yet been cached, first, it will create one (and load it's contents if the file exists).
 
 ---
 
