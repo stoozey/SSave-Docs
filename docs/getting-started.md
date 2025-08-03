@@ -16,7 +16,7 @@ You'll see two folders: `SSave` and `Demo`. The demo includes a demonstration of
 Create a new script and inside it, add this code:
 
 ```js
-function SaveFile() : SSave("save") {
+function SaveFile() : SSave() {
     add_value("score", SSAVE_TYPE.REAL, 0);
 }
 ```
@@ -25,7 +25,7 @@ This creates a new save file class that contains a score value.
 
 When creating save classes, you need to extend the `SSave` class. This is so you can call the [`add_value()`](ssave.md#ssaveadd_valuename-type-default) method within it's constructor.
 
-## Interfacing With the SaveFile Class
+## Working With the SaveFile Class
 
 Before we start, create a new object and add this code to it:
 
@@ -64,7 +64,7 @@ Now that we have this basic object set up, we can begin integrating it with with
 
 When accessing save files, you have two options: manually creating save instances or allowing the [`SSaveManager`](ssave-manager.md) to handle it for you.
 
-I recommend using the [`SSaveManager Method`](getting-started.md#ssavemanager-method) if you're just starting out, as it greatly simplifies the process of managing your saves.
+Here I will cover how to use the manager, as it greatly simplifies the process of managing your saves. If you want to see an example of how to manage saves manually, check out [this example](examples.md#using-ssave-without-the-manager).
 
 ### SSaveManager Method
 

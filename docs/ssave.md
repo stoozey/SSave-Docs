@@ -6,7 +6,7 @@
 
 | Name     | Type                                              | Required? | Default                                 | Description                              |
 | -------- | ----------                                        | :-------: | ---------                               | ---------------------------------------- |
-| `name`   | `String`                                           |  No      | `"data"`                                | The name of the file that gets written to disk.    |
+| `name`   | `String`                                           |  No      | `"data"`                                | The name of the file that gets written to disk. For example, the default value would save to disk as `data.ssave`.    |
 | `protection`| [`SSAVE_PROTECTION`](enums.md#ssave_protection) |  No      | [`SSAVE_PROTECTION_DEFAULT`](config.md#ssave_protection_default) | The new protection level to set.    |
 
 The constructor for the base SSave class. It is not intended to be used directly, but rather extended by other classes.
@@ -70,7 +70,6 @@ Saves the current state of the save to disk.
 | `name`   | `String`   |  Yes      | -         | The name of the value.              |
 
 Retrieves the current value of the specified name. If the value does not exist, it will return the default value defined in [`add_value()`](ssave.md#ssaveadd_valuename-type-default).
-
 
 ---
 
