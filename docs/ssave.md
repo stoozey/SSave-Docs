@@ -4,9 +4,9 @@
 
 ### **`SSave([name, protection]) constructor`**
 
-| Name     | Type                                              | Required? | Default                                 | Description                              |
-| -------- | ----------                                        | :-------: | ---------                               | ---------------------------------------- |
-| `name`   | `String`                                           |  No      | `"data"`                                | The name of the file that gets written to disk. For example, the default value would save to disk as `data.ssave`.    |
+| Name     | Type                                              | Required? | Default                                                          | Description                              |
+| -------- | ----------                                        | :-------: | ---------                                                        | ---------------------------------------- |
+| `name`   | `String`                                           |  No      | `"data"`                                                         | The name of the file that gets written to disk. For example, the default value would save to disk as `data.ssave`.    |
 | `protection`| [`SSAVE_PROTECTION`](enums.md#ssave_protection) |  No      | [`SSAVE_PROTECTION_DEFAULT`](config.md#ssave_protection_default) | The new protection level to set.    |
 
 The constructor for the base SSave class. It is not intended to be used directly, but rather extended by other classes.

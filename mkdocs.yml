@@ -29,6 +29,17 @@ theme:
       primary: custom
       accent: custom
 
+nav:
+  - Home: index.md
+  - User Guide:
+    - Getting Started: getting-started.md
+    - Examples: examples.md
+  - Documentation:
+    - SSave: ssave.md
+    - SSaveManager: ssave-manager.md
+    - Configuration: config.md
+    - Enums: enums.md
+
 extra_css:
   - stylesheets/extra.css
 
