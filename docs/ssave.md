@@ -43,7 +43,7 @@ function SaveFile() : SSave("save", SSAVE_PROTECTION.ENCODE) constructor {
 
 ### **`SSave.load([filePrefix])`**
 
-*Returns* [`SSave`](ssave.md) – returns itself for chaining
+*Returns* `Boolean` – returns success
 
 | Name        | Type               | Required?  | Default  | Description                                                                                                              |
 | --------    | -------------      | :-------:  | -------- | ------------------------------------------------------------------------------------------------------------------------ |

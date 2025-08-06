@@ -4,17 +4,17 @@
 
 ### **`ssave_get(ssaveConstructor, [filePrefix])`**
 
-Wrapper of [SSaveManager.get](ssave-manager.md#ssavemanagergetssaveconstructor-fileprefix).
+*This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.*
 
-This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.
+Wrapper of [SSaveManager.get](ssave-manager.md#ssavemanagergetssaveconstructor-fileprefix).
 
 ---
 
 ### **`ssave_remove(ssaveConstructor, [filePrefix])`**
 
-Wrapper of [SSaveManager.remove](ssave-manager.md#ssavemanagerremovessaveconstructor-fileprefix).
+*This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.*
 
-This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.
+Wrapper of [SSaveManager.remove](ssave-manager.md#ssavemanagerremovessaveconstructor-fileprefix).
 
 ---
 
@@ -26,11 +26,11 @@ This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) 
 | ----------------- | ---------- | :-------: | ------------------------------ | ---------------------------------------- |
 | `ssaveConstructor`| `Function` |  No      | `Undefined`                     | The constructor for the SSave class.   |
 
+*This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.*
+
 Iterates on all cached saves matching the constructor and returns an array of them.
 
 If no constructor is supplied, ALL saves (regardless of their constructor), are returned.
-
-This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.
 
 ---
 
@@ -38,7 +38,7 @@ This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) 
 
 ### **`SSaveManager.get(ssaveConstructor, [filePrefix])`**
 
-*Returns* [`SSave`](ssave.md) – the requested save instance
+*Returns* [`SSave`](ssave.md) – the requested or created save instance
 
 | Name              | Type       | Required? | Default                        | Description                              |
 | ----------------- | ---------- | :-------: | ------------------------------ | ---------------------------------------- |

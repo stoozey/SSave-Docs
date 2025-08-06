@@ -16,7 +16,7 @@ You'll see two folders: `SSave` and `Demo`. The demo includes a demonstration of
 Create a new script and inside it, add this code:
 
 ```js
-function SaveFile() : SSave("save") {
+function SaveFile() : SSave("save") constructor {
     add_value("points", SSAVE_TYPE.REAL, 0);
 }
 ```
@@ -27,7 +27,7 @@ When creating save classes, you need to extend the `SSave` class. This is so you
 
 ## Working With the SaveFile Class
 
-### Setup
+### Setup
 
 Before we start, create a new object and add this code to it:
 
@@ -86,15 +86,13 @@ Once you've called [`ssave_get()`](ssave-manager.md#ssave_getssaveconstructor-fi
 
 ### Multiple Saves
 
-What if we want to have multiple save slots? This is where the `filePrefix` argument comes in.
+What if we want to have multiple slots of `SaveFile`? This is where the `filePrefix` argument comes in.
 
-Right now, our save file is reading and writing to `save.ssave`. If we set the `filePrefix` to `1`, it would read and write to `1save.ssave`.
+Right now, our save file is reading and writing to `save.ssave`. If we set `filePrefix` to `1`, it would read and write to `1save.ssave`.
 
-***Note: you can use any string or number as a prefix.***
+Using this, we can modify our `Save` and `Load` functions to treat the `filePrefix` as a slot index:
 
-With this knowledge, we can modify our `Save` and `Load` functions to treat the `filePrefix` as a slot index:
-
-```js title="Create Event"
+```js hl_lines="1 4 10 14-18"  title="Create Event"
 slotIndex = 0;
 
 Save = function() {
@@ -116,6 +114,8 @@ SetSlotIndex = function(_slotIndex) {
 
 Load();
 ```
+
+***Note: you can use any string or number as a prefix.***
 
 And in our step event let's listen for keys 0-9 to change the slot index:
 
@@ -142,7 +142,7 @@ Save = function() {
 }
 ```
 
-If you're unsure which functions can be chained, take a look at the return type of functions in the [`SSave`](ssave.md) section.
+If you're unsure which functions can be chained, take a look at the return type of functions in the [`SSave` section](ssave.md#class-functions).
 
 ## Conclusion
 

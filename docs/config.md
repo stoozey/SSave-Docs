@@ -22,7 +22,7 @@ When no file prefix is defined (for the various functions that have an optional 
 
 *Type:* `Boolean`
 
-Whether or not the built-in SSaveManager implementation is used. Disable this if you don't need it, or you want to create your own version of it.
+When enabled, a persistant instance of [`SSaveManager`](ssave-manager.md) is created and can be used to manage saves via the [functions listed here](ssave-manager.md#functions).
 
 ---
 
