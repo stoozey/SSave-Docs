@@ -114,6 +114,14 @@ Resets all values to their defaults as defined in [`add_value()`](ssave.md#ssave
 
 ---
 
+### **`SSave.erase()`**
+
+*Returns* [`SSave`](ssave.md) – returns itself for chaining
+
+Deletes the saved file from disk if it exists.
+
+---
+
 ### **`SSave.set_protection(protection)`**
 
 *Returns* [`SSave`](ssave.md) – returns itself for chaining

@@ -18,6 +18,19 @@ Wrapper of [SSaveManager.remove](ssave-manager.md#ssavemanagerremovessaveconstru
 
 ---
 
+### **`ssave_erase(ssaveConstructor, [filePrefix])`**
+
+| Name              | Type       | Required? | Default                        | Description                             |
+| ----------------- | ---------- | :-------: | ------------------------------ | --------------------------------------- |
+| `ssaveConstructor`| `Function` |  Yes      | —                              | The constructor for the SSave class.    |
+| `filePrefix`      | `String`   |   No      | `SSAVE_FILE_PREFIX_DEFAULT`    | Optional file prefix.                   |
+
+*This can only be used if the [`SSAVE_USE_MANAGER`](config.md#ssave_use_manager) configuration is `true`.*
+
+Searches for the file on disk matching the constructor and prefix, then deletes it if it exists.
+
+---
+
 ### **`ssave_get_all([ssaveConstructor])`**
 
 *Returns* `Array<`[`SSave`](ssave.md)`>` – an array of matching saves
